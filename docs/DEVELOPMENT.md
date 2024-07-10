@@ -85,7 +85,7 @@ tracing::info!(counter.example3 = 1, other_fields="will be included in tags", "B
 
 **Don't put log lines in the same trace statements as metrics, especially if theres a format
 variable in the log line,
-they will blow up you metrics cardinality and cost a lot of money if you use DataDog**
+they will blow up your metrics cardinality and cost a lot of money if you use DataDog**
 
 Metrics are also controlled by the `RUST_LOG` environment variable. This makes it easy to have debug
 metrics, just use `tracing::debug!(histogram.debug_thing = 42.1)`.
